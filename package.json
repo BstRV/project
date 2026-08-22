@@ -1,0 +1,33 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "servor src/ index.html 1234 --reload",
+    "lint": "oxlint src/",
+    "format": "oxfmt src/",
+    "build": "echo Comando Reservado",
+    "deploy": "echo Comando Reservado"
+  },
+  "keywords": [
+    "Javascripts",
+    "HTML",
+    "Portafolio"
+  ],
+  "author": "BstRV",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.22.0",
+      "onFail": "download"
+    }
+  },
+  "type": "module",
+  "devDependencies": {
+    "oxfmt": "^0.64.0",
+    "oxlint": "^1.79.0",
+    "servor": "^4.0.2"
+  }
+}
