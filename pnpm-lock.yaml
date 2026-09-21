@@ -206,6 +206,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@fontsource-variable/victor-mono':
+        specifier: ^5.3.0
+        version: 5.3.0
     devDependencies:
       gh-pages:
         specifier: ^6.3.0
@@ -221,6 +225,9 @@ importers:
         version: 4.0.2
 
 packages:
+
+  '@fontsource-variable/victor-mono@5.3.0':
+    resolution: {integrity: sha512-xwUwrQ17BEofW/X5jRAXKxtQ0AFaSwH2/CKq6+ZuGUTiA9pmaYchM/7RvlyNcnGjIYT67DoJZuIRp4xpMjyFEw==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -686,6 +693,8 @@ packages:
     engines: {node: '>= 10.0.0'}
 
 snapshots:
+
+  '@fontsource-variable/victor-mono@5.3.0': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:

@@ -1,4 +1,58 @@
+/* Si decides cargar la fuente desde CSS */
+@import "@fontsource-variable/victor-mono";
+
 body {
   background: #222;
-  color: #fff;
+  color: #fcf7f7;
+  font-family: "Victor Mono Variable", monospace;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    "head head"
+    "body menu"
+    "foot foot";
+  grid-template-rows: 50px 1fr 50px;
+  height: 200px;
+}
+
+header {
+  grid-area: head;
+  background: blue;
+}
+section {
+  grid-area: body;
+  background: green;
+}
+aside {
+  grid-area: menu;
+  background: grey;
+}
+footer {
+  grid-area: foot;
+  background: #333;
+}
+
+.parent {
+  background: grey;
+  display: flex;
+  margin: 20px;
+  gap: 1rem;
+
+  .item {
+    width: 100px;
+    height: 100px;
+    background: pink;
+  }
+
+  .item-2 {
+    background: cadetblue;
+    /* position: relative;
+    top: 55px; */
+
+    ::hover {
+      transform: translate(55px, 25px);
+    }
+  }
 }

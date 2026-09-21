@@ -30,5 +30,8 @@
     "oxfmt": "^0.64.0",
     "oxlint": "^1.79.0",
     "servor": "^4.0.2"
+  },
+  "dependencies": {
+    "@fontsource-variable/victor-mono": "^5.3.0"
   }
 }
