@@ -37,22 +37,127 @@ footer {
 .parent {
   background: grey;
   display: flex;
+  position: relative;
   margin: 20px;
+  height: 100px;
   gap: 1rem;
 
   .item {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     background: pink;
   }
 
   .item-2 {
-    background: cadetblue;
-    /* position: relative;
-    top: 55px; */
+    background: indigo;
+    position: sticky;
+    top: 0;
+  }
+}
 
-    ::hover {
-      transform: translate(55px, 25px);
-    }
+.box {
+  width: 100px;
+  height: 50px;
+  background: grey;
+  margin: 20px;
+  transition:
+    background 1s,
+    width 0.35s;
+}
+
+.box:hover {
+  width: 200px;
+  background: indigo;
+  transition:
+    background 2s,
+    width 2s;
+}
+
+.element {
+  --size: 50px;
+  background: grey;
+  width: var(--size);
+  height: var(--size);
+  margin: 1rem;
+  animation:
+    move 2s alternate infinite,
+    change-color 5s infinite alternate;
+}
+
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(200px, 0);
+  }
+}
+
+@keyframes change-color {
+  from {
+    background: red;
+  }
+  to {
+    background: green;
+  }
+}
+
+.imagen {
+  --size: 150px;
+  --color: black;
+
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--color);
+
+  object-fit: contain;
+}
+
+.imagen-2 {
+  object-fit: cover;
+  object-position: top right;
+  object-view-box: inset(0%);
+  transition: object-view-box 0.5s;
+
+  &:hover {
+    object-view-box: inset(15%);
+  }
+}
+
+.mascara {
+  height: 300px;
+  width: 100px;
+
+  background-image: url(https://i.pinimg.com/736x/80/98/bb/8098bb427769b4c3a64f23585f46153f.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 2rem;
+
+  mask-image: radial-gradient(circle 50px at 50% 80%, black 75%, transparent 76%);
+
+  &:hover {
+    mask-image: none;
+  }
+}
+
+.contenedor {
+  --pos: 50% 50%;
+  width: 700px;
+  height: 500;
+  margin: 2rem;
+  background: repeating-radial-gradient(ellipse, darkred 0%, red 20%);
+
+  .imagen {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    transition: clip-path 2s;
+    clip-path: ellipse(100% 100% at var(--pos));
+  }
+
+  &:hover .imagen {
+    clip-path: ellipse(0% 0% at var(--pos));
   }
 }
